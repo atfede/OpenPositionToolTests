@@ -14,7 +14,7 @@ const browserReload = browserSync.reload();
 const browserStream = browserSync.stream();
 
 // # App #
-const devURL = "localhost:54343/"; // Change to URL including port by ASP.net
+const devURL = "localhost:54038/"; // Change to URL including port by ASP.net
 const path = {  // Enviroment Paths
     stylesDev: "./Content/_scss/",
     stylesProd: "./Content/",
