@@ -1,31 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
 namespace OpenPositionToolTests.Models
 {
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
-
     public class User : DbContext
     {
-        // Your context has been configured to use a 'User' connection string from your application's 
-        // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'OpenPositionToolTests.Models.User' database on your LocalDb instance. 
-        // 
-        // If you wish to target a different database and/or database provider, modify the 'User' 
-        // connection string in the application configuration file.
-        public User()
-            : base("name=User")
-        {
-        }
-
-        // Add a DbSet for each entity type that you want to include in your model. For more information 
-        // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
-
-        public virtual DbSet<MyEntity> MyEntities { get; set; }
-    }
-
-    public class MyEntity
-    {
-        public int Id { get; set; }
+        [Key]
+        public int EmployeeId { get; set; }
         public string Name { get; set; }
-    }
+        public string Email { get; set; }
+        public string UserType { get; set; }
+        public string UserDesiredType { get; set; }
+        public string Password { get; set; }
+
+        public User(string name, string email, string userType, string password)
+        {
+            //this.EmployeeId = EmployeeId;
+            this.Name = name;
+            this.Email = email;
+            this.UserType = userType.ToString();
+            this.Password = password;
+        }
+    }    
 }
+
+//email, user type(Basic User - RMG, TAG, PM, TL), password and password confirmation.

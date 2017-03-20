@@ -1,8 +1,53 @@
 ﻿
 @{
     ViewBag.Title = "Register";
-    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+    Layout = "~/Views/Login/Shared/_LayoutLogin.cshtml";
 }
+<form action="#" method="post" class="card-block">
+    <div class="text-center">
+        <h3><i class="fa fa-lock"></i> Register:</h3>
+        <hr class="mt-2 mb-2">
+    </div>
+    <div class="md-form">
+        <i class="fa fa-envelope prefix"></i>
+        <input type="text" id="Name" name="Name" class="form-control">
+        <label for="Name">Your Name</label>
+    </div>
+    <div class="md-form">
+        <i class="fa fa-envelope prefix"></i>
+        <input type="text" id="Email" name="Email" class="form-control">
+        <label for="Email">Your email</label>
+    </div>
+    <div class="md-form">
+        <i class="fa fa-lock prefix"></i>
+        <input type="password" id="Password" name="Password" class="form-control">
+        <label for="Password">Your password</label>
+    </div>
+    <div class="md-form">
+        <i class="fa fa-lock prefix"></i>
+        <input type="password" name="Password2" id="Password2" class="form-control">
+        <label for="Password2">Repeat password</label>
+    </div>
+    <div class="">
+        <i class="fa fa-envelope prefix"></i>
+        <label for="Name">User Type</label>
+        <select class="form-control">
+            <option value="BasicUser">Basic</option>
+            <option value="RMG">RMG</option>
+            <option value="TAG">TAG</option>
+            <option value="PM">PM</option>
+            <option value="TL">TL</option>
+        </select>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary">Login</button>
+    </div>
+</form>
+<div class="modal-footer">
+    <div class="options">
+        <p>Not a user? <a href="#">Sign Up</a></p>
+        <p>Forgot your <a href="#">Password?</a></p>
+    </div>
+</div>
 
-<h2>Register</h2>
 
